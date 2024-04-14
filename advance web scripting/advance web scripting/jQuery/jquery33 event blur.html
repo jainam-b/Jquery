@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+        span{
+            display:none;
+        }
+
+        form{
+            border:solid 10px #ffff00;
+            padding:20px;
+        }
+
+        div{
+            border:12px solid lightblue;
+            text-align: center;
+        }
+        </style>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+    
+        <script>
+            $(document).ready(function(){
+                $("#username").on("blur",function(){
+                    var unl=$(this).val();
+                    if(unl.length<5){
+                        $("#username").focus().select();
+                        $("p#msg1").html("username is too small");
+                    }  
+
+                    else{
+                        $("p#msg1").html("username ok").fadeTo(1000,.1);
+                    }
+                });
+
+
+                $("#password").on("blur",function(){
+                    var upwd=$(this).val();
+                    if(upwd.search(/[0-9]/)<0){
+                        $("#password").focus().select();
+                        $("p#msg2").html("Password should have a number");
+                    }
+
+                    else{$("p#msg2").html("Password ok").fadeTo(1000,.1);};
+                });
+            });
+        </script>
+
+        <form>
+            Welcome to registeration process
+            <p><input id="username" type="text"><span>Please enter Full name</span></p>
+            <p id="msg1"></p>
+            <p><input id="password" type="password"><span>please choose a good password</span></p>
+            <p id="msg2"></p>
+        </form>
+    </body>
+</html>

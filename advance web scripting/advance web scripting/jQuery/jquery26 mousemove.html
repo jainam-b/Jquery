@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            div{
+                width:220px;
+                height:170px;
+                margin:10px 50px 10px 10px;
+                background-color: yellow;
+                border:2px groove;
+                float:right;
+            }
+
+            p{
+                margin:0;
+                margin-left:10px;
+                color:red;
+                width:220px;
+                height:120px;
+                padding-top:70px;
+                float:left;
+                font-size:40px;
+            }
+
+            span{
+                display:block;
+            }
+        </style>
+    </head>
+    <body>
+        <p><span>Move the mouse over the div</span>
+        <span>&nbsp;</span>
+        </p>
+        <div></div>
+        <script>
+            var walk=0;
+            hk=100;
+            $( "div" ).on("mousemove",function(){
+                $( "span" ).first().text(walk++);
+                if(walk>hk){
+                    hk=hk+100;
+
+                    $( "span" ).last().text("wow walked "+hk+"meters")
+                };
+            });
+        </script>
+    </body>
+</html>

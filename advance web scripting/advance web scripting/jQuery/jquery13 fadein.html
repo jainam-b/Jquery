@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            img{display: none}
+        </style>
+    </head>
+    <body>
+        <button id="getback">Bothh</button>
+        <img id="dog" src="image1.jpeg" alt="doggy" width="600">
+        <script>
+            $( "#getback" ).click(function(){
+                $(" #dog ").fadeIn(2000,"swing")  //2000 milliseconds
+            });
+        </script>
+
+    </body>
+</html>

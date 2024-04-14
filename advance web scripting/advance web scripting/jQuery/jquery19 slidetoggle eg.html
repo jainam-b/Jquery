@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script src="jquery.js"></script> 
+        <style>
+        h1{border:2px solid green;
+            max-width: 50%;
+            background: yellow;
+            text-align: center; 
+            }
+
+        p{display:none;}
+            </style>
+    </head>
+
+    <body>
+        <h1 id="hd1">Apple</h1>            <!--<h2>Apple </h2>-->
+        <p id="p1">This is a apple</p>     <!--<p>This is a para about apple</p>-->
+        <h1 id="hd2">Bat</h1>              <!--<h2>Bat </h2>-->
+        <p id="p2">This is a Bat</p>       <!--<p>This is a para about bat </p>-->
+        <h1 id="hd3">Cat</h1>              <!--<h2>Cat</h2>-->
+        <p id="p3">This is a Cat</p>       <!--<p>This is a para about cat </p>-->
+        <h1 id="hd4">Dog</h1>              <!--<h2>Dog</h2>-->
+        <p id="p4">This is a Dog</p>       <!--<p>This is a para about dog</p>-->
+    <script>
+            $("#hd1").click(function(){
+                $("#p2,#p3,#p4").hide();    //$("h2").click{function(){
+                $("#p1").slideToggle(2000); //    $("p").slideUp();
+            });                             //    $(this).next().slideDown
+            
+            $("#hd2").click(function(){
+                $("#p1,#p3,#p4").hide();
+                $("#p2").slideToggle(2000);
+            });
+
+            $("#hd3").click(function(){
+                $("#p1,#p2,#p4").hide();
+                $("#p3").slideToggle(2000);
+            });
+
+            $("#hd4").click(function(){
+                $("#p1,#p2,#p3").hide();
+                $("#p4").slideToggle(2000);
+            });
+
+    </script>
+    </body>
+</html>
+
+

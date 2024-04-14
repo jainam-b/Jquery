@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div>
+        This is body <br><br>
+    </div>
+    <article>This is article <br><br>
+        <div id="d1"><br>D1<br>
+            <p id="p1">P1<br>
+                <button id="b1">Show my parents until body</button>
+            </p>
+        </div>
+        <br><br><br><br>
+        <div id="d2">D2<br><br>
+            <ol>
+                <li>one</li>
+                <li>
+                    <ul>
+                        <li>Unordered list</li>
+                        <l1><button id="b2">Show my parents untilll ol</button></l1> <!-- ol excluded -->
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </article>
+    <br>
+    </div>
+    <script>
+        $("#b1").on("click", function () {
+            $(this)
+                .parentsUntil("body")
+                .css({ "color": "red", "border": "5px dashed red", "padding": "15px" });
+        });
+
+        $("#b2").on("click", function () {
+            $(this)
+                .parentsUntil("ol")
+                .css({ "color": "red", "border": "5px solid green", "padding": "15px" });
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            #one{
+                border:1px solid green;
+                width:300px;
+                padding:10px;
+            }
+
+            #p1{
+                border:1px solid blue;
+                margin:5px;
+            }
+
+            div{
+                text-align: center;
+                max-width: 1024;
+                margin:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="one">
+                I am div text<br>
+                <p id="p1">Click button one to see my parent</p>
+            </div>
+
+            <br>
+            <button id="b1">One</button>
+            <script>
+                $("#b1").on("click",function(){
+                    $("#p1").parent().css({"color":"red","border":"5px dashed orange"});
+                    //try removing parent() also
+                });
+            </script>
+        </div>
+    </body>
+</html>

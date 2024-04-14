@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            #target{width: 220px; height: 120px; margin: 10px; background: yellow; border: 18px groove;}
+            p{color: red; width: 220px; height: 100px; padding-top: 10px; font-size: 40px;}
+            span{display: block; background-color: orange; color: black; font-size: 60px;}
+            div{border: 10px green dotted; border-radius: 20px; width: 90%; margin: auto; padding: 40px; overflow: auto; height:600px;}
+        </style>
+    </head>
+    <body>
+        <div align="center">
+            <div id="target"></div>
+            <p>Move the mouse over the div
+            <span>&nbsp;</span>
+        </p>
+        </div>
+        <script>
+            $("div#target").hover(function(){
+                $("span").text(" IN ")
+            },
+            function(){
+                $("span").text( " OUT " )
+            });
+        </script>
+    </body>
+</html>

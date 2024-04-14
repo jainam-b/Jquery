@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            h1{
+                border:2px solid yellow;
+                max-width: 50%;
+                background: green;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="b1">Animate first</button>
+        <h1>This heading 1 will animate for certain things</h1>
+        <h1>This is for reference</h1>
+        <script>
+            $("#b1").click(function(){
+                $("h1").first().animate({
+                    borderWidth:'50px',height:'200px',opacity:'0.7',fontSize:'3.5em',marginLeft:'+=100px'},1000);
+                });
+        </script>
+    </body>
+</html>

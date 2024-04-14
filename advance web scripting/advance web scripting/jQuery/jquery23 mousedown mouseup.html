@@ -1,0 +1,24 @@
+<html>
+   <head>
+    <script src="jquery.js"></script>
+    <style>
+        p{
+            border:dotted 5px red;
+            width:600px;
+            text-align: center;
+        }
+    </style>
+   </head>
+   <body>
+        <p>Press mouse and release</p>    <!-- use .on based on newer version of jquery -->
+        <script>
+            $( "p" )
+              .on( "mouseup", function() {
+                $( this ).append( "<span style='color:#f00;'>Mouse up.</span>" );
+              } )
+              .on( "mousedown", function() {
+                $( this ).append( "<span style='color:#00f;'>Mouse down.</span>" );
+              } );
+        </script>
+   </body> 
+</html>

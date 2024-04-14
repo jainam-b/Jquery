@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+        h1{border:2px solid green;
+            max-width: 50%;
+            background: yellow;
+            text-align: center;
+            }
+            </style>
+    </head>
+
+    <body>
+        <button id="b1">show first</button>
+        <button id="b2">show second</button>
+        <h1 id="hd1">This heading 1 was shown using toggle()</h1>
+        <h1 id="hd2">This heading 2 was shown using slideToggle()</h1>
+    <script>
+            $("#b1").click(function(){
+                $("#hd1").toggle(2000);
+            });
+            
+            $("#b2").click(function(){
+                $("#hd2").slideToggle(2000);
+            });
+    </script>
+    </body>
+</html>

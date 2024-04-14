@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            li{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        This is body <br><br>
+
+        <div id="d2">This is second div d2
+            <ol>
+                <li>one</li>
+                <li>two</li>
+            </ol>
+        </div>
+        <ul>
+            <li id="li1">Unordered list list id is li1</li>
+            <li><button id="b2">mee toooooooooooo</button></li>
+            <li id="li2">Unordered list list id is li2</li>
+            <li id="li3">Unordered list list id is li3</li>
+            <li id="li4">Unordered list list id is li4</li>
+            <li id="li5">Unordered list list id is li5</li>
+            <li id="li6">Unordered list list id is li6</li>
+            <li id="li7">Unordered list list id is li7</li>
+        </ul>
+        <p> I am sibling to ul</p>
+
+        <script>
+            alert("click ok");
+            $("li").last().css({"color":"green","border":"2px solid blue","padding":"5px"});
+        </script>
+
+</body>
+</html>

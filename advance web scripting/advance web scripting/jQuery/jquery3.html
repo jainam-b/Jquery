@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jquery same id used</title>
+        <script src="jquery.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#special").on("click",function(){
+                        $(this).hide();
+                    });
+                });
+            </script>
+    </head>   
+        <body>
+            <p id="special">Hide me</p>
+            <div id="special">jda</div> <!-- Only work on first one in case of same id -->
+        </body>
+</html>
+        

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+        h1{border:2px solid green;
+            max-width: 50%;
+            background: yellow;
+            text-align: center;
+            display:none;}
+            </style>
+    </head>
+
+    <body>
+        <button id="b1">show first</button>
+        <button id="b2">show second</button>
+        <h1>This heading 1 was shown using show()</h1>
+        <h1>This heading 2 will not be effected</h1>
+        <h1>This heading 3 was shown using slideDown()</h1>
+    <script>
+            $("#b1").on("click",function(){
+                $("h1").first().show();
+            });
+            
+            $("#b2").on("click",function(){
+                $("h1").last().slideDown();
+            });
+    </script>
+    </body>
+</html>

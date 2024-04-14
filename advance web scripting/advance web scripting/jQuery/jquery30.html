@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <title>MOUSE UP/DOWN</title>
+    <style>
+        p {
+            border:2px solid red;
+        }        
+        span{background: yellow;}
+        div{
+            border: 10px green dotted; 
+            border-radius: 20px;
+            width: 50%; 
+            margin: auto;
+            padding: 50px;
+        }   
+    </style>
+        <script src="jquery.js"></script>
+
+        <script>
+
+            for(i=0;i<=p.length;i++){
+                list=[]
+                list.append(p);
+            }
+            $(document).ready(function(){
+                $("input").on("keypress",function(event){
+                    if(event.key==list[i]){
+                        $("div#data").html(event.key);
+                    }
+                });
+        </script>
+    
+</head>
+<body>
+
+
+<body>
+    <div align="center"></div></body>
+</html>

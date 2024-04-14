@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <title>MOUSE UP/DOWN</title>
+    <style>
+        p {
+            border:2px solid red;
+        }        
+        span{background: yellow;}
+        div{
+            border: 10px green dotted; 
+            border-radius: 20px;
+            width: 50%; 
+            margin: auto;
+            padding: 50px;
+        }   
+    </style>
+        <script src="jquery.js"></script>
+
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+        alert();
+        $("input").on("keydown",function(){
+            $("p").css({"background-color":"yellow","border":"15px solid red"});
+        });
+        $("input").on("keyup",function(){
+            $("p").css({"background-color":"red","border":"15px dashed blue"});
+        });
+    });
+</script>
+<div align = "center">
+    Enter Something <input type="text">
+    <p>The background will change ok</p>
+</div>
+</body>
+</html>

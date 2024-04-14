@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("p,h2,div").on("click",function(){
+                $(this).css({ "border":"3px solid red"});
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <p>I am a paragraph</p>
+        <p>This is h2</p>
+        <div>I am a div leave me behind</div>
+        <h2>This is h2</h2>
+
+    </body>
+</html>

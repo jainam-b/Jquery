@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <style>
+        span{
+            display:none;
+        }
+
+        form{
+            border:solid 10px #ffff00;
+            padding:20px;
+        }
+
+        div{
+            border:12px solid lightblue;
+            text-align: center;
+        }
+        </style>
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+    
+        <script>
+
+        $(document).ready(function(){
+            $( "input" ).on("focus",function(){
+                $( this ).prev( "span" ).css( "display" , "inline" ).fadeTo(2000,.4);
+            });
+        });
+
+        </script>
+        <div>
+            Welcome to registeration process
+        <form>
+            <p>
+                <span>Please enter full name</span>
+                <input type="text">
+            </p>
+
+            <p>
+                <span>Please choose a good password</span>
+                <input type="password">
+            </p>
+        </form>
+    </div>
+    </body>
+</html>

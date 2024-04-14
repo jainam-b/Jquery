@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            img{visibility: visible}
+        </style>
+    </head>
+    <body>
+        <button id="getback">Bothh</button>
+        <img id="dog" src="image1.jpeg" alt="doggy" width="600">
+        <script>
+            $( "#getback" ).on("click",function(){
+                $(" #dog ").fadeOut(2000,"linear")  //2000 milliseconds
+            });
+        </script>
+
+    </body>
+</html>

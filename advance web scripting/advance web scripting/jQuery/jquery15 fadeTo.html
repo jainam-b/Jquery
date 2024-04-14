@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+    </head>
+
+    <body>
+    <h1>Click this para to see it fade</h1>
+    <h1>Compare this to one that won't fade</h1>
+    <script>
+            $("h1").first().click(function(){
+                $(this).fadeTo(1000,0.3);
+            });    
+    </script>
+    </body>
+</html>

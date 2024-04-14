@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div>
+        This is body <br><br>
+    </div>
+    <article>This is article <br><br>
+        <div id="d1"><br>D1<br>
+            <p id="p1">P1<br>
+                <button id="b1">Show my parents until body</button>
+            </p>
+        </div>
+        <br><br><br><br>
+        <div id="d2">D2<br><br>
+            <ol>
+                <li>one</li>
+                <li>
+                    <ul>
+                        <li>Unordered list</li>
+                        <l1><button id="b2">me toooooooooooo</button></l1>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </article>
+    <br>
+    </div>
+    <script>
+        var myelement = prompt("Enter a tag:p,div,b,li");
+        $("article").find(myelement)
+            .css({ "color": "green", "border": "5px dashed blue", "padding": "5px" });
+    </script>
+</body>
+
+</html>

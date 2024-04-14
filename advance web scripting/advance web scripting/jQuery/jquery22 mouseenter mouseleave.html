@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            p{
+                border:solid 5px red;
+                width:300px;
+                text-align: center;
+                font-size:2em;
+            }
+
+            div{
+                border:20px lightgreen dashed;
+                border-radius:20px;
+                width:50%;
+                margin:auto;
+                padding:50px;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("p").mouseenter(function(){
+                    $("p").css({
+                        "background-color":"yellow",
+                        "font-weight":"bold"
+                    });
+                });
+
+            $("p").on("mouseleave",function(){
+                $("p").css({
+                    "background-color":"#dcdcdc",
+                    "font-weight":"normal"
+                });
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <div align="center">
+            <p>Move the mouse pointer over this paragraph</p>
+        </div>
+    </body>
+</html>
