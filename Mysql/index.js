@@ -1,13 +1,13 @@
-var mysql = require('mysql');
+var mysql = require("mysql");
 
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "jainam",
-   database: "AWS"
+  database: "AWS",
 });
 
-// TO CREATE THE TABLE 
+// TO CREATE THE TABLE
 // con.connect(function(err) {
 //     if (err) throw err;
 //     console.log("Connected!");
@@ -18,13 +18,29 @@ var con = mysql.createConnection({
 //     });
 //   });
 
+// con.connect(function(err) {
+//   if (err) throw err;
+//   console.log("Connected!");
+//   var sql = "INSERT INTO customers (name, address) VALUES ('John', 'Highway 71')";
+//   con.query(sql, function (err, result) {
+//     if (err) throw err;
+//     console.log("1 record inserted");
+//   });
+// });
 
-con.connect(function(err) {
+con.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
-  var sql = "INSERT INTO customers (name, address) VALUES ('John', 'Highway 71')";
-  con.query(sql, function (err, result) {
+  var myquery = " select * from customers;";
+  con.query(myquery, function (err, result) {
     if (err) throw err;
-    console.log("1 record inserted");
+    console.log(result);
+
+
+    Object.keys(result).forEach(function (key) {
+      var myrow = result[key];
+      console.log(myrow.id, myrow.name, myrow.address);
+    });
+    
   });
 });
