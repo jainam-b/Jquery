@@ -6,6 +6,7 @@
                 $("button").on("click",function(){
                     $.get("108_demo.php",function(data,status){
                         $("h2").html(data);
+                        console.log(status)
                     });
                 });
             });

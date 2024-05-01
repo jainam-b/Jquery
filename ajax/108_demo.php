@@ -1,4 +1,7 @@
 <?php
+
+    $name="jainam";
+
     $cities=array(
         "Delhi"=>strtotime("+5 hour 30 minutes"),
         "Moscow"=>strtotime("+3 hours"),
