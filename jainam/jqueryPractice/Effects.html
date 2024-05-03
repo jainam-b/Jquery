@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>jQuery Effects Examples</h2>
+    
+    <!-- Fade Effect -->
+    <div class="box" id="fadeBox">Fade</div>
+
+    <!-- Hide Effect -->
+    <div class="box" id="hideBox">Hide</div>
+
+    <!-- Show Effect -->
+    <button type="submit" class=" " id="showBox" >Show</button>
+
+    <!-- Slide Up Effect -->
+    <div class="box" id="slideUpBox">Slide Up </div>
+
+    <!-- Slide Down Effect -->
+    <div class="box" id="slideDownBox" >Slide Down</div>
+
+    <!-- Toggle Effect -->
+    <div class="box" id="toggleBox">Toggle</div>
+
+    <script>
+        // Fade Effect
+        $("#fadeBox").click(function() {
+            $(this).fadeOut(2000);
+        });
+
+        // Hide Effect
+        $("#hideBox").click(function() {
+            $(this).hide();
+        });
+
+        // Show Effect
+        $("#showBox").click(function() {
+            $("#hideBox").toggle(1000);
+             
+        });
+
+        // Slide Up Effect
+        $("#slideUpBox").click(function() {
+            $(this).slideUp();
+        });
+
+        // Slide Down Effect
+        $("#slideDownBox").click(function() {
+            $(this).slideDown();
+        });
+
+        // Toggle Effect
+        $("#toggleBox").click(function() {
+            $(this).toggle();
+        });
+
+        $(document).ready(function(){
+            var cssc=$("#hideBox").css("width"); // retrive the css of the id and the parameter is compulsory 
+            console.log(cssc);
+
+        })
+
+        $(document).ready(function(){
+            var cssc=$("#hideBox").removeClass("box"); // removes the class of the id  
+            console.log("class removed ");
+
+        })
+        $(document).ready(function(){
+            var cssc=$("#hideBox").addClass("box"); // removes the class of the id  
+            console.log("class added ");
+
+        })
+        $(document).ready(function(){
+            var cssc=$("#hideBox").addClass("box"); // removes the class of the id  
+            console.log("class added ");
+            if ($("#hideBox").hasClass("boxs")) { //log if the id has the classes 
+                console.log("box class"); 
+                
+            }
+
+        })
+        $("#showBox").click(function() {
+            $("#hideBox").toggleClass("box"); 
+             
+        });
+    </script>
+</body>
+</html>
+
+

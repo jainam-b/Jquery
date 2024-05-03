@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>jainam</h1>
+        <h1 class="b">jainam</h1>
+        <h1>jainam</h1>
+    </div>
+<script>
+    $(document).ready(function(){
+        $("div").each(function(){
+            console.log($(this).text());
+        })
+        console.log($(".b").html("bagrecha"));
+    })
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <h2>jQuery Effects Examples</h2>
+    
+    <!-- Slide Down Effect -->
+    <div class="box" id="slideDownBox">Slide Down</div>
+
+    <button id="toggleButton">Toggle Slide</button>
+
+    <script>
+        // Slide Down Effect
+        $("#toggleButton").click(function() {
+            $("#slideDownBox").slideToggle();
+        });
+    </script>
+</body>
+</html>

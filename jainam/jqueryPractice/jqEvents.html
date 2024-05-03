@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events</title>
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>jQuery Events Examples</h2>
+    
+    <!-- Click Event -->
+    <div class="box" id="clickBox">Click Me</div>
+
+    <!-- Double Click Event -->
+    <div class="box" id="doubleClickBox">Double Click Me</div>
+
+    <!-- Mouse Down Event -->
+    <div class="box" id="mouseDownBox">Mouse Down</div>
+
+    <!-- Mouse Enter Event -->
+    <div class="box" id="mouseEnterBox">Mouse Enter</div>
+
+    <!-- Mouse Leave Event -->
+    <div class="box" id="mouseLeaveBox">Mouse Leave</div>
+
+    <!-- Key Down Event -->
+    <input type="text" id="keyDownInput" placeholder="Press any key">
+
+    <!-- Key Up Event -->
+    <input type="text" id="keyUpInput" placeholder="Press any key">
+
+    <!-- Key Press Event -->
+    <input type="text" id="keyPressInput" placeholder="Press any key">
+
+    <script>
+        // Click Event
+        $("#clickBox").click(function() {
+            alert("You clicked the box!");
+        });
+
+        // Double Click Event
+        $("#doubleClickBox").dblclick(function() {
+            alert("You double-clicked the box!");
+        });
+
+        // Mouse Down Event
+        $("#mouseDownBox").mousedown(function() {
+            $(this).css("background-color", "lightgreen");
+        });
+
+        // Mouse Enter Event
+        $("#mouseEnterBox").mouseenter(function() {
+            $(this).css("background-color", "lightcoral");
+        });
+
+        // Mouse Leave Event
+        $("#mouseLeaveBox").mouseleave(function() {
+            $(this).css("background-color", "black");
+        });
+
+        // Key Down Event
+        $("#keyDownInput").keydown(function(event) {
+            alert("Key pressed: " + event.key);
+        });
+
+        // Key Up Event
+        $("#keyUpInput").keyup(function(event) {
+            alert("Key released: " + event.key);
+        });
+
+        // Key Press Event
+        $("#keyPressInput").keypress(function(event) {
+            alert("Key pressed: " + event.key);
+        });
+    </script>
+</body>
+</html>
