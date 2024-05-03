@@ -1,8 +1,8 @@
 let db_config={
-    host:"localhost",
-    user:"Hardik",
-    password:"HG",
-    database:"aws"
+    host: "localhost",
+    user: "root",
+    password: "jainam",
+    database: "AWS",
 }
 
 module.exports=db_config;

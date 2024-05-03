@@ -1,10 +1,10 @@
 var mysql=require('mysql');
-var con=mysql.createConnection({
-    host:"localhost",
-    user:"Hardik",
-    password:"HG",
-    database:"aws"
-});
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "jainam",
+    database: "AWS",
+  });
 
 con.connect(function(err){
     if(err){
@@ -25,4 +25,4 @@ con.query(myquery,function(err,result){
         console.log("Success");
 
     con.end();
-});
+})
