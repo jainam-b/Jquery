@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jquery Demo</title>
+        <script src="jquery.js"></script>
+        <script>
+            $( document ).ready(function(){
+                $( ".myclass" ).on("click",function(){
+                    $("div").hide();
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <p>Cannot hide me</p>
+        <p class="myclass">Try to click me</p>
+        <p>Why leave me behind</p>
+        <div>abscsdjiasjdi</div>
+        <div>dajuasjf</div>
+    </body>
+</html>

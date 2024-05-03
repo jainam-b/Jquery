@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <style>
+            img{display:none}
+        </style>
+    </head>
+    <body>
+        <div id="clickme">Click here to shoo the dog</div>
+        <button id="getback">Get back</button>
+        <img id="dog" src="image1.jpeg" alt="doggy" width="600">
+        <script>
+            $( "#clickme" ).on("click",function(){
+                $(" #dog ").show("slow","linear");  //or we can use $(" #dog ").show(5000);    5000 is milliseconds
+            });
+
+            $( "#getback" ).on("click",function(){
+                $(" #dog ").hide("fast","swing",function(){alert('Hide completed')});   //callback function
+            });
+        </script>
+
+    </body>
+</html>

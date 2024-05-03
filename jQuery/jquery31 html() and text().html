@@ -1,0 +1,60 @@
+<html>
+        <head>
+            <script src="jquery.js"></script>
+            <style>
+                p{
+                    border:2px solid red;
+                    padding:5px;
+                }
+
+                span{
+                    background: yellow;
+                }
+
+                div{
+                    border:3px solid green;
+                    width:50%;
+                    margin:auto;
+                    padding:15px; 
+                }
+            </style>
+        </head>
+        <body>
+            <script>
+                $(function(){
+                    $("#get").on("click",function(){
+                        var $paradata=$("#a").html();
+                        $("#c").html($paradata);
+                        var $paradata=$("#b").html();
+                        $("#d").html($paradata);
+                    });
+
+                    $("#set").on("click",function(){
+                        var $paradata=$("#a").html();
+                        $("#c").text($paradata);
+                        var $paradata=$("#b").html();
+                        $("#d").text($paradata);
+                    });
+
+                });
+            </script>
+
+            <div id="d1">
+                This is first div D1
+                <p id="a">I am <span>text from paragraph </span> with id a</p>
+                <p id="b">I am <b>HTML</b> <span>from paragraph </span> with id b</p>
+            </div>
+
+            <div id="d2">
+                This is first div D2
+                <p id="c">I am para 1</p>
+                <p id="d">I am para 2</p>
+            </div>
+
+            <div align="center">
+                <button id="get">Get paragraph values as html</button>
+                <button id="set">set paragraph values as text</button>
+            </div>
+        </body>
+    
+</html>
