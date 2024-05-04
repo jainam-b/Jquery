@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Traversal Functions Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <body>
+      <div>
+        <p id="parent">Parent</p>
+        <p id="child">Child</p>
+        <p id="sibling">Sibling</p>
+      </div>
+    </body>
+    <script>
+      $(document).ready(function () {
+        // parent()
+        $("#child").parent().css("border", "2px solid red"); //div
+
+        // parents()
+        $("#child").parents().css("background-color", "black"); // div body html are the ancestor
+        console.log("log", $("#child").parents());
+
+        // parentsUntil()
+        $("#child").parentsUntil("div").css("font-weight", "bolder");
+        console.log("parentsUntil", $("#child").parentsUntil());
+
+        // children()
+        $("div").children().css("color", "green");
+
+        // siblings()
+        $("#sibling").siblings().css("text-decoration", "underline");
+
+        // next()
+        $("#sibling").next().css("font-style", "italic");
+
+        // first() and last()
+        $("div").first().css("background-color", "yellow");
+        $("div").last().css("background-color", "orange");
+      });
+    </script>
+  </head>
+</html>
+
+<!-- 
+Of course! Let's break down each of these jQuery traversal functions and their concepts:
+
+1. **parent():** This function selects the immediate parent element of the specified element. For example, if you have an HTML structure like `<div><p id="child">Child</p></div>`, calling `$("#child").parent()` will select the `<div>` element.
+
+2. **parents():** Unlike `parent()`, `parents()` selects all ancestors of the specified element, i.e., all the parent elements up the DOM tree. It includes not just the immediate parent, but all ancestors. 
+
+3. **parentsUntil():** This function is similar to `parents()`, but it selects all ancestors up to, but not including, the element matched by the provided selector. For example, if you have multiple nested `<div>` elements, calling `$("#child").parentsUntil("div")` will select all ancestors of `#child` until it reaches a `<div>` element.
+
+4. **children():** Selects all direct child elements of the specified element. For example, if you have a `<div>` element with multiple `<p>` tags inside it, calling `$("div").children()` will select all those `<p>` tags.
+
+5. **siblings():** Selects all sibling elements of the specified element. Siblings are elements that share the same parent. For example, if you have multiple `<p>` tags inside a `<div>`, calling `$("#sibling").siblings()` will select all other `<p>` tags except the one with id "sibling".
+
+6. **next():** Selects the immediate next sibling of the specified element. If you have multiple sibling elements, calling `$("#sibling").next()` will select the sibling immediately following the element with id "sibling".
+
+7. **first():** Selects the first matched element. For example, if you have multiple `<div>` elements selected, calling `$("div").first()` will select the first `<div>` element.
+
+8. **last():** Selects the last matched element. Similar to `first()`, but it selects the last matched element. If you have multiple `<div>` elements selected, calling `$("div").last()` will select the last `<div>` element.
+
+These functions are useful for navigating and selecting elements within the DOM (Document Object Model) structure of an HTML page. They help you target specific elements based on their relationships with other elements in the document. -->
+
+<!-- Sure, let's go through each function and see what it selects:
+
+1. **$("#child").parent().css("border", "2px solid red");**
+   - This function selects the immediate parent element of the element with the id "child". It selects the `<div>` element that wraps around the `<p>` element with the id "child".
+
+2. **$("#child").parents().css("background-color", "black");**
+   - This function selects all ancestors of the element with the id "child". It selects the `<html>`, `<body>`, and `<div>` elements because they are all ancestors of the element with the id "child".
+
+3. **$("#child").parentsUntil("div").css("font-weight", "bolder");**
+   - This function selects all ancestors of the element with the id "child" up to (but not including) the `<div>` element. It selects the `<body>` element because it's the closest ancestor until the `<div>`.
+
+4. **$("div").children().css("color", "green");**
+   - This function selects all direct child elements of the `<div>` element. It selects all `<p>` elements inside the `<div>`.
+
+5. **$("#sibling").siblings().css("text-decoration", "underline");**
+   - This function selects all sibling elements of the element with the id "sibling". It selects the `<p>` elements with the ids "parent" and "child".
+
+6. **$("#sibling").next().css("font-style", "italic");**
+   - This function selects the immediate next sibling of the element with the id "sibling". It selects the `<p>` element with the id "child".
+
+7. **$("div").first().css("background-color", "yellow");**
+   - This function selects the first matched element, which is the first `<div>` element in the document.
+
+8. **$("div").last().css("background-color", "orange");**
+   - This function selects the last matched element, which is the last `<div>` element in the document.
+
+Let me know if you need further clarification on any of these! -->
