@@ -2,6 +2,7 @@ let http=require('http');
 let figlet=require('figlet');
 
 let data=figlet.textSync("Hello world")
+console.log(data);
 
 http.createServer(function(req,res){
     res.writeHead(200, {'Content-Type': 'text/html'});

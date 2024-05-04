@@ -16,7 +16,7 @@ con.query(myquery,function(err,result){
     //printing the complete result object
     console.log(result);
     console.log();
-
+    
     Object.keys(result).forEach(function(key){
         var myrow=result[key];
         console.log(myrow.emailid,myrow.name); 
