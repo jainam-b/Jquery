@@ -24,10 +24,12 @@ connection.connect((err) => {
 
 //define a default route /
 app.get("/", (req, res) => {
-  res.send("welcome- crud operations are at /api/get /api");
+  // res.send("welcome- crud operations are at /api/get /api");
+  res.sendFile(__dirname + "/23_form.html");
 });
 
 app.get("/23_form", (req, res) => {
+  // console.log(__dirname,__filename);
   res.sendFile(__dirname + "/23_form.html");
 });
 
@@ -66,13 +68,14 @@ app.post("/api/users", (req, res) => {
   }
 
   //Insert the new user in the database
-  const sqlqry = "Insert into studentsinfo(name,emailid) values(?,?)";
-  connection.query(sqlqry, [name, emailid], (error, results) => {
+  const sqlqry = "Insert into studentsinfo(name,emailid) values('"+name+"','"+emailid+"')";
+  connection.query(sqlqry, (error, results) => {
     if (error) {
       console.error("Error inserting user into the database " + error.stack);
       return res.status(500).json({ error: "Failed to insert user" });
     }
     //send the success response
+     
     res.json({ message: "User inserted successfully" });
   });
 });
@@ -83,15 +86,13 @@ app.get("/api/users/:id", (req, res) => {
   console.log(req.params);
   //Delete the user from the database
   connection.query(
-    "DELETE FROM studentsinfo where uid=?",
-    [userId],
-    (error, results) => {
+    "DELETE FROM studentsinfo where name='"+userId+"'",(error, results) => {
       if (error) {
         console.error("Error deleting user from the database " + error.stack);
         return res.status(500).json({ error: "Failed to delete user" });
       }
 
-      if (results.affectedRowas === 0) {
+      if (results.affectedRows === 0) {
         return res.status(404).json({ error: "User not found" });
       }
 
