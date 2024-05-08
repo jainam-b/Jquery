@@ -1,6 +1,6 @@
 // import mysql module
 const mysql=require('mysql');
-// database info 
+// database info  of mysql
 const con=mysql.createConnection({
     host:"localhost",
     user:"root",
