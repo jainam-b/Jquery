@@ -13,6 +13,7 @@
     <body>
         <button id="b1">show first</button>
         <button id="b2">show second</button>
+        <button id="b3">show middle</button>
         <h1>This heading 1 was shown using show()</h1>
         <h1>This heading 2 will not be effected</h1>
         <h1>This heading 3 was shown using slideDown()</h1>
@@ -24,6 +25,9 @@
             $("#b2").on("click",function(){
                 $("h1").last().slideDown();
             });
+            $("#b3").on("click",function(){
+                $("h1").first().next().slideToggle();
+            })
     </script>
     </body>
 </html>
