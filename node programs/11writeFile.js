@@ -1,6 +1,6 @@
 var fs=require('fs');
-
-fs.writeFile('newfile.txt','\n I am fine \n',function(err){
+const data="jainam is writing the file using fs write module "
+fs.writeFile('newfile.txt',data,function(err){
     if(err)
         console.log(err);
     else

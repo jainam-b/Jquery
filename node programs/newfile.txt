@@ -1,2 +1,1 @@
-
- I am fine 
+jainam is writing the file using fs write module 
