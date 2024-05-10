@@ -7,8 +7,8 @@ var mydata=[
 var mykeys=Object.keys(mydata);
 //print mykeys obtained from test object
 console.log();
-console.log(typeof(mykeys));
-console.log(mykeys);
+console.log("type of keys ",typeof(mykeys));
+console.log("mykeys",mykeys);
 console.log();
 
 //print each value from test object
@@ -16,7 +16,7 @@ console.log();
 // ['0','1','2']
 
 mykeys.forEach((key,index)=>{
-    console.log(key,mydata[key]);
+    console.log("inside for each",key,mydata[key]);
     //console.log(key,typeof(mydata[key]));
 });
 
